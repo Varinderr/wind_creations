@@ -1,0 +1,13 @@
+session_start();
+$_SESSION['P']=$user;
+session_start();
+if(empty($_session['P']))
+{
+	else
+	{
+	header('location:any php file')
+	}
+}
+to destroy to session:-
+[$-session['P']]
+session destroy();

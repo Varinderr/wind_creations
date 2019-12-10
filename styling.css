@@ -1,0 +1,16 @@
+body
+{
+	margin:0px;
+}
+.head
+	{
+	background:gray;
+	margin:0px;
+	height:100px;
+	width:100%;
+	color:black;
+	text-align:center;
+	font-family:French Script MT;
+	padding-top:25px;
+	font-size:100;		
+	}

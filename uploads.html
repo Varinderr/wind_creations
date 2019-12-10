@@ -1,0 +1,75 @@
+<?php
+$con=mysqli_connect("localhost", "root", "", "wind") or die("no connection");
+
+	//$n=$_REQUEST['box'];
+	$q="select * from images";
+	$x=mysqli_query($con,$q);
+	
+?>
+
+<html>
+	<head>
+	<link href="uploads.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="dist/jquery.fancybox.min.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="dist/jquery.fancybox.min.js"></script>
+		<title>
+		</title>
+	</head>
+			<body>
+			<div class="head">
+					Upload
+					<div style="float:right">
+						</div>
+					</div>
+					<div id="menu_bar">
+					<a class="nav_link" href="mainpage.php">
+					<div class="level_1">
+					Home 
+					</div>
+				</a>
+				<a class="nav_link" href="uploads.php">
+					<div class="level_1">
+					Uploads
+					</div>
+				</a>
+				<a class="nav_link" href="gallery.php">
+					<div class="level_1">
+					Gallery
+					</div>
+				</a>
+				
+				<a class="nav_link" href="feedback.php">
+					<div class="level_1">
+					Feedback
+					</div>
+				</a>
+				    </div>
+					<footer style="margin:0px;">
+			<form method="post" enctype="multipart/form-data">
+			&nbsp &nbsp &nbsp YOU CAN UPLOAD YOUR IMAGES HERE<br><BR>
+				<input type="file" name="var">
+				<tr>
+					<td>
+						<textarea name="des" style="font-size:15;" class="text_box" placeholder="Add image despription here"></textarea>
+					</td>
+				</tr>
+				<input type="submit" name="sub">
+			</form>
+		</footer>
+		<br>
+
+					<div class="main">
+					<?php
+						while($xyz=mysqli_fetch_assoc($x))
+						{
+							?>
+							<div class="box">
+								<a data-fancybox="gallery" href="<?php echo $xyz['path']?>"><img src="<?php echo $xyz['path']?>"></a>
+							</div>
+							<?php
+						}
+					?>
+					</div>
+			</body>
+</html>

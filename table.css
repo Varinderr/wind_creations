@@ -1,0 +1,55 @@
+div.div_table
+{
+	display:table;
+	margin: 0 auto;
+	border-spacing: 2px;
+	background-color:white;
+	opacity:0.7;
+}
+
+div.div_table div.div_table_row
+{
+	display:table-row;
+}
+
+div.div_table div.div_table_row div.div_table_cell_t1
+{
+	display:table-cell;
+	width: 140px;
+	height: 40px;
+	font-family: Steagisler;
+	font-size: 17px;
+	text-align: right;
+	line-height: 50px;
+	padding-right: 6px;
+	color:black;
+	font-weight:bold;
+}
+
+div.div_table div.div_table_row div.div_table_cell_t2
+{
+	padding-left: 6px;
+	display:table-cell;
+	width: 260px;
+	height: 40px;
+}
+
+div.div_table div.div_table_row div.div_table_cell_t2 input
+{
+	border-radius: 5px;
+	border: 2px solid black;
+	width: 240px;
+	height: 35px;
+	font-family: Steagisler;
+	text-align: center;
+	font-size: 15px;
+	transition: border 0.22s;
+	transition-timing-function: ease-in-out;
+}
+
+div.div_table div.div_table_row div.div_table_cell_t2 input:focus
+{
+	outline-color: transparent;
+	outline-style: nonE;
+	border: 2px  black;
+}
